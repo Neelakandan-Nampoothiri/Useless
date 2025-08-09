@@ -96,6 +96,10 @@ https://drive.google.com/file/d/1XMEoH_Rpm3xC9Mq_59m2CgSPO9TXwC2d/view?usp=drive
 
 The main interface, showing the digital clock and the list of set alarms.
 
+video
+
+https://drive.google.com/file/d/1ZXgAQYhESc2hvL_g9Fw_GhMSwQ58jplx/view?usp=drivesdk
+
 The modal window for setting a new alarm or editing an existing one.
 
 The full-screen ringing overlay, showing the progress circle that fills as the user makes noise.
