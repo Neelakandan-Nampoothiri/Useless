@@ -1,4 +1,4 @@
-#Annoying Alarm Clock 🎯
+Annoying Alarm Clock 🎯
 Basic Details
 Team Name: TimeOut
 
@@ -9,7 +9,7 @@ participating individually
 
 
 
-#Project Description
+Project Description
 The Annoying Alarm Clock is a minimalist, browser-based alarm application designed with one goal: to make waking up an unforgettable, infuriating experience. It forces the user to actively engage with it by making noise, ensuring they are truly awake before the alarm can be silenced.
 
 The Problem (that doesn't exist)
