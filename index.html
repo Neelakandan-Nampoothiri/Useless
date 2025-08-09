@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annoying Alarm Clock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        @keyframes pulse-bg {
+            0% { background-color: #7f1d1d; }
+            50% { background-color: #b91c1c; }
+            100% { background-color: #7f1d1d; }
+        }
+        .ringing-animation {
+            animation: pulse-bg 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Main Container -->
+    <div id="app-container" class="min-h-screen flex flex-col items-center pt-8 md:pt-16">
+
+        <!-- Digital Clock -->
+        <div class="text-center mb-8">
+            <h1 id="digital-clock" class="font-orbitron text-6xl md:text-8xl lg:text-9xl tracking-widest">00:00:00</h1>
+            <p id="digital-date" class="text-lg md:text-xl text-gray-400">Date</p>
+        </div>
+
+        <!-- Alarms Section -->
+        <main class="w-full max-w-4xl p-4 md:p-8">
+             <h2 class="text-2xl font-bold text-center mb-6 border-b border-gray-700 pb-2">Your Alarms</h2>
+            <div id="alarm-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Alarm cards will be injected here -->
+            </div>
+            <div class="fixed bottom-8 right-8">
+                <button id="add-alarm-button" class="bg-red-600 hover:bg-red-700 rounded-full w-16 h-16 flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
+                    <span class="text-4xl font-light">+</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===== Modals / Overlays ===== -->
+
+    <!-- Alarm Form Modal -->
+    <div id="alarm-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-md">
+            <h2 id="modal-title" class="text-2xl font-bold mb-6">New Alarm</h2>
+            <form id="alarm-form">
+                <input type="hidden" id="alarm-id">
+                <div class="mb-4">
+                    <label for="alarm-label" class="block text-gray-400 mb-2">Label</label>
+                    <input type="text" id="alarm-label" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2" required>
+                </div>
+                <div class="mb-6">
+                    <label for="alarm-time" class="block text-gray-400 mb-2">Time</label>
+                    <input type="datetime-local" id="alarm-time" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2" required>
+                </div>
+                <div class="flex gap-4">
+                    <button type="button" id="cancel-alarm-button" class="flex-1 bg-gray-600 hover:bg-gray-700 font-bold py-3 px-4 rounded-lg transition-colors">Cancel</button>
+                    <button type="submit" class="flex-1 bg-red-600 hover:bg-red-700 font-bold py-3 px-4 rounded-lg transition-colors">Save</button>
+                </div>
+                <button type="button" id="delete-alarm-button" class="hidden w-full text-center text-red-400 hover:underline mt-4">Delete Alarm</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ringing Alarm Overlay -->
+    <div id="ringing-overlay" class="hidden fixed inset-0 bg-red-900 z-50 flex flex-col items-center justify-center p-8 text-center ringing-animation">
+        <h2 id="ringing-label" class="text-4xl font-bold mb-8">WAKE UP!</h2>
+        <div class="relative w-48 h-48 flex items-center justify-center mb-8">
+            <svg class="absolute w-full h-full" viewBox="0 0 100 100">
+                <circle class="text-gray-700" stroke-width="10" cx="50" cy="50" r="45" fill="transparent"></circle>
+                <circle id="ringing-progress" class="text-white" stroke-width="10" cx="50" cy="50" r="45" fill="transparent" stroke-linecap="round" transform="rotate(-90 50 50)" style="stroke-dasharray: 283; stroke-dashoffset: 283;"></circle>
+            </svg>
+            <i class="text-6xl">🎤</i>
+        </div>
+        <p class="text-2xl font-bold mb-8">MAKE NOISE FOR <span id="ringing-seconds">10</span> SECONDS!</p>
+        <button id="silence-button" class="bg-gray-500 cursor-not-allowed font-bold py-4 px-8 rounded-lg text-2xl" disabled>Silence</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
