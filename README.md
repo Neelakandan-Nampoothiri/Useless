@@ -4,6 +4,7 @@ Team Name: TimeOut
 
 Team 
 
+
 Team Lead: Neelakandan Nampoothiri N
 participating individually
 
@@ -12,29 +13,58 @@ participating individually
 Project Description
 The Annoying Alarm Clock is a minimalist, browser-based alarm application designed with one goal: to make waking up an unforgettable, infuriating experience. It forces the user to actively engage with it by making noise, ensuring they are truly awake before the alarm can be silenced.
 
+
+
 The Problem (that doesn't exist)
 In a world of gentle, soothing alarm tones and forgiving snooze buttons, people have become too comfortable with waking up peacefully. This has led to a catastrophic decline in morning-induced rage and a dangerous surplus of well-rested, pleasant individuals. We're here to fix that.
+
+
+
 
 The Solution (that nobody asked for)
 We have engineered a solution that replaces tranquility with mandatory chaos. Our alarm doesn't just ring; it demands tribute. To silence it, the user must produce 10 continuous seconds of sound, proving their wakefulness through sheer volume. No more silent fumbling to turn off your alarm—you have to earn your peace and quiet.
 
-#Technical Details
+
+
+
+Technical Details
 Technologies/Components Used
 For Software:
+
+
+
 
 Languages used: HTML5, CSS3, JavaScript (ES6+)
 
 Frameworks used: None (Vanilla JS)
 
+
+
 Libraries used: None
+
+
+
 
 Tools used: Visual Studio Code, Web Browser Developer Tools
 
+
+
+
 For Hardware:
+
+
+
+
 
 A computer or mobile device with a modern web browser.
 
+
+
+
+
 A functioning microphone.
+
+
 
 Implementation
 For Software:
@@ -53,6 +83,9 @@ Set an alarm using the '+' button.
 Project Documentation
 For Software:
 Screenshots
+https://drive.google.com/file/d/11NdDn3PWyoRoxs1ev5La26UmhJCJPTRR/view?usp=drive_link
+https://drive.google.com/file/d/13J6fvoJ9-2NTF-RBxBzNSjFS5NG6Bt2b/view?usp=drive_link
+https://drive.google.com/file/d/1XMEoH_Rpm3xC9Mq_59m2CgSPO9TXwC2d/view?usp=drive_link
 
 
 The main interface, showing the digital clock and the list of set alarms.
